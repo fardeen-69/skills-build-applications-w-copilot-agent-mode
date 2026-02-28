@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'octofit_tracker',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,19 @@ MIDDLEWARE = [
     *MIDDLEWARE,
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+# Allow all methods and headers for CORS
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    '*',
+]
+ALLOWED_HOSTS = ['*']
 
 
 # Password validation
@@ -143,3 +157,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Use custom User model
+AUTH_USER_MODEL = 'octofit_tracker.User'
