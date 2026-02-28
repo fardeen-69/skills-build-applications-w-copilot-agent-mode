@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'octofit_tracker',
+    'rest_framework',
+    'djongo',
 ]
 
 MIDDLEWARE = [
